@@ -1,7 +1,10 @@
-:root{
-    --primary:#133C55;
-    --secondary:#386FA4;
-    --white:#fff;
+ :root{
+     --primary:#133C55;
+     --secondary:#386FA4;
+     --white:#fff;
+     --link-primary-background:#59A5DB;
+     --link-secondary-background:#86D2F6;
+     --text-color:#4e4d4d;
 }
 
 html{
@@ -10,7 +13,7 @@ html{
 *,body{
     margin: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: "Lato", sans-serif;
     font-size:20px;
 }
 .disabled{
@@ -29,7 +32,7 @@ html{
     width: 100vw;
     height: 100vh;
     color:var(--white);
-    background-color: #133C55BF;
+    background-color: #133C5579;
 }
 d1:hover, d2:hover{
     animation: paused;
@@ -108,6 +111,61 @@ d1:hover, d2:hover{
     z-index: 1;
     margin-top: 10vh;
 }
+.about{
+    margin-top: 20px;
+}
+.h3_title{
+    font-size: 40px;
+    text-align: center;
+    color: var(--primary);
+    margin:15px;
+}
+.about_flex{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.about_image_container{
+    -webkit-mask-image: url(../../image/svg1.svg);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    -webkit-mask-attachment:scroll;
+    width: 100%;
+}
+.about_image{
+    max-width:  100%;
+    height: auto;
+}
+.about_us{
+    padding: 10px;
+    width: 100%;
+}
+.about_text{
+    color: var(--text-color);
+}
+.about_link{
+    margin: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.primary-link, .secondary-link{
+    background-color: var(--link-primary-background);
+    padding: 9px;
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 5px;
+}
+.secondary-link{
+    background-color: var(--link-secondary-background);
+}
+.secondary-link:hover,.primary-link:hover{
+    text-decoration: underline;
+    font-size: 22px;
+    padding: 12px;
+}
+
 @media screen and (min-width: 800px){
     @keyframes mobileWelcome{
         0%{
@@ -116,8 +174,8 @@ d1:hover, d2:hover{
         33%{
             background-image: url("../../image/desktophousekeeping2.jpg");
         }
-        66%{ background-image: url("../../image/desktophousekeeping3.jpg");
-
+        66%{
+            background-image: url("../../image/desktophousekeeping3.jpg");
         }
         100%{
             background-image: url("../../image/desktophousekeepping4.jpg");
@@ -137,7 +195,7 @@ d1:hover, d2:hover{
     }
     .nav-link a{
         display: inline;
-        background-color: #133C55AA;
+        background-color: #133C5589;
         color:var(--white);
     }
     .nav-link a:hover{
@@ -151,6 +209,15 @@ d1:hover, d2:hover{
     .big_name{
         font-size: 100px;
     }
-
+    .about_flex{
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+    .about_us{
+        max-width: 50%;
+    }
+    .about_link{
+        display: block;
+    }
 }
 
