@@ -40,4 +40,6 @@ let mynumber=function()
         i--
     }
 }
+/* apparition au défilement */
+
 stopNumber=window.setInterval(mynumber, 300)
