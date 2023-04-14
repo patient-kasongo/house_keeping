@@ -19,17 +19,17 @@ button.addEventListener("click",function()
 
 let mynumber=function()
 {
-    if(i==(name[0].length))
+    if(i===(name[0].length))
     {
         direction='toLeft'
 
     }
-    if(i==0)
+    if(i===0)
     {
         direction='toRight'
             contenair_whrite.textContent=''
     }
-    if(direction=="toRight")
+    if(direction==="toRight")
     {
         contenair_whrite.textContent+=name[0][i]
         i++
@@ -40,6 +40,27 @@ let mynumber=function()
         i--
     }
 }
-/* apparition au défilement */
+/*appartion au défilement*/
+const ratio=0.1
+options={
+    root:null,
+    rootMargin:'0px',
+    threshold:ratio
+}
 
+const handleIntersect = function (entries, observer) {
+    entries.forEach(function (entry){
+        if(entry.intersectionRatio>ratio){
+            entry.target.classList.add('reveal-visible')
+            observer.unobserve(entry.target)
+        }
+    })
+}
+document.documentElement.classList.add('reveal-loaded')
+document.addEventListener("DOMContentLoaded", function(){
+    const observer=new IntersectionObserver(handleIntersect,options)
+    document.querySelectorAll("[class*='reveal']").forEach(function (r){
+        observer.observe(r)
+    })
+})
 stopNumber=window.setInterval(mynumber, 300)

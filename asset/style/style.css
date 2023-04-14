@@ -34,7 +34,7 @@ html{
     color:var(--white);
     background-color: #133C5579;
 }
-d1:hover, d2:hover{
+.d1:hover, .d2:hover{
     animation: paused;
 }
 @keyframes mobileWelcome{
@@ -91,7 +91,6 @@ d1:hover, d2:hover{
 }
 .nav-link a{
     display: block;
-    color:var(--white);
     text-decoration: none;
     padding:5px;
     margin: 5px;
@@ -134,6 +133,7 @@ d1:hover, d2:hover{
     width: 100%;
     height: 300px;
 }
+
 .about_image{
     max-width:  100%;
     height: auto;
@@ -195,6 +195,9 @@ d1:hover, d2:hover{
     font-size: 16px;
     padding: 0 20px 10px 20px;
 }
+.contacts{
+    margin-top: 10px;
+}
 .footer{
     color: var(--white);
     text-align: center;
@@ -202,7 +205,46 @@ d1:hover, d2:hover{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap:wrap;
+    flex-direction: column;
     background-color: var(--secondary);
+}
+.footer_icone{
+    margin: 20px;
+}
+.contact{
+    width: 250px;
+    padding: 10px;
+    box-shadow: 1px 1px 3px var(--secondary);
+    border-radius: 10px;
+    margin:10px;
+}
+.contact_link{
+    font-size: 12px;
+    font-style: italic;
+}
+.contact_container{
+    display: flex;
+    align-items: center;
+}
+.contact_information{
+    margin: 5px;
+}
+.contacts_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+/*apparition au défiilement*/
+.reveal-loaded [class*='reveal']{
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0s;
+}
+.reveal-loaded .reveal-visible{
+    opacity: 1;
+    transform: translateY(0);
+    transition: 2s cubic-bezier(.54,.01,0,.99);
 }
 @media screen and (min-width: 800px){
     @keyframes mobileWelcome{
