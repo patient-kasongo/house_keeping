@@ -58,6 +58,8 @@ const handleIntersect = function (entries, observer) {
 }
 document.documentElement.classList.add('reveal-loaded')
 document.addEventListener("DOMContentLoaded", function(){
+    document.documentElement.classList.remove('reveal-loaded');
+    document.documentElement.classList.add('content-visible');
     const observer=new IntersectionObserver(handleIntersect,options)
     document.querySelectorAll("[class*='reveal']").forEach(function (r){
         observer.observe(r)
