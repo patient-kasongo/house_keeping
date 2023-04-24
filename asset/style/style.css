@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,700;1,300&display=swap');
  :root{
      --primary:#133C55;
      --secondary:#386FA4;
@@ -311,8 +311,9 @@ html{
         opacity: 1;
         transform: translateX(0);
         position: static;
-        margin:10px 0 0 0;
-        width: 430px;
+        margin:8px 0 0 0;
+        width: 450px;
+        height: auto;
     }
     .nav-link a{
         display: inline;
@@ -341,7 +342,7 @@ html{
         padding: 10px 35px 10px 35px;
     }
     .service_container{
-        width: 420px;
+        width: 450px;
     }
 }
 
