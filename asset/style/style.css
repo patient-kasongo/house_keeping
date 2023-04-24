@@ -18,9 +18,6 @@ html{
     overflow-x: hidden;
 
 }
-body{
-    width: 100vw;
-}
 .content-visible .loader_container{
     display: none;
 }
@@ -58,7 +55,8 @@ body{
     justify-content: space-between;
 }
 /*menu deroulant*/
-.visible .button-show{
+
+ .visible .button-show{
     display:none;
 }
 .collapse{
