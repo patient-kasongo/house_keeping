@@ -1,25 +1,14 @@
-let name=['House Keeping']
 let stopNumber
 let contenair_whrite=document.querySelector(".big_name")
 let direction=' '
 let str="";
-/*génération d'un nombre croissant*/
-/*Passer ce nombre comme indice de mon tableau */
 let i=0
-
-
 let button=document.querySelector(".navbar-button");
 let body=document.querySelector("body")
-button.addEventListener("click",function()
-{
-    body.classList.toggle('visible');
-})
-
-
-
+const name_whrite=['House Keeping']
 let mynumber=function()
 {
-    if(i===(name[0].length))
+    if(i===(name_whrite[0].length))
     {
         direction='toLeft'
 
@@ -31,7 +20,7 @@ let mynumber=function()
     }
     if(direction==="toRight")
     {
-        contenair_whrite.textContent+=name[0][i]
+        contenair_whrite.textContent+=name_whrite[0][i]
         i++
     }else{
         str=contenair_whrite.textContent;
@@ -58,11 +47,13 @@ const handleIntersect = function (entries, observer) {
 }
 document.documentElement.classList.add('reveal-loaded')
 document.addEventListener("DOMContentLoaded", function(){
-    document.documentElement.classList.remove('reveal-loaded');
-    document.documentElement.classList.add('content-visible');
     const observer=new IntersectionObserver(handleIntersect,options)
     document.querySelectorAll("[class*='reveal']").forEach(function (r){
         observer.observe(r)
     })
 })
-stopNumber=window.setInterval(mynumber, 300)
+button.addEventListener("click",function()
+{
+    body.classList.toggle('visible');
+})
+stopNumber=window.setInterval(mynumber, 400)
