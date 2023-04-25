@@ -109,6 +109,13 @@ html{
     z-index: 1;
     margin-top: 10vh;
 }
+.question{
+    margin: 10px;
+}
+.answer{
+    color: var(--secondary);
+    font-weight: bold;
+}
 .about{
     margin-top: 20px;
     margin-bottom: 20px;
@@ -118,6 +125,12 @@ html{
     text-align: center;
     color: var(--primary);
     margin:15px;
+}
+.h3_title_secondary{
+    font-size: 25px;
+    text-align: center;
+    color:var(--primary);
+    margin: 15px;
 }
 .about_flex{
     display: flex;
@@ -193,6 +206,9 @@ html{
 }
 .contacts{
     margin-top: 10px;
+}
+.contact_message{
+    text-align: center;
 }
  /*carousell*/
 

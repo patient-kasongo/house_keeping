@@ -7,5 +7,6 @@
     <orderEntry type="module" module-name="ekima-2.0" />
     <orderEntry type="module" module-name="exemple" />
     <orderEntry type="module" module-name="ekima" />
+    <orderEntry type="module" module-name="leadeur" />
   </component>
 </module>
