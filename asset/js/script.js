@@ -6,7 +6,7 @@ let i=0
 let button=document.querySelector(".navbar-button")
 let body=document.querySelector("body")
 let loader=document.getElementById("loader_container")
-const name_whrite=['House Keeping']
+const name_whrite=['Usafi caregiving']
 let mynumber=function()
 {
     if(i===(name_whrite[0].length))
@@ -55,9 +55,10 @@ document.addEventListener("DOMContentLoaded", function(){
     document.querySelectorAll("[class*='reveal']").forEach(function (r){
         observer.observe(r)
     })
+    stopNumber=window.setInterval(mynumber, 400)
 })
 button.addEventListener("click",function()
 {
     body.classList.toggle('visible');
 })
-stopNumber=window.setInterval(mynumber, 400)
+
