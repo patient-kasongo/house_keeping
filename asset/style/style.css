@@ -22,6 +22,51 @@ html{
 .content-visible .loader_container{
     display: none;
 }
+/*loader*/
+.three.col{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#loader-2 span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: #3498db;
+    margin: 35px 5px;
+}
+
+#loader-2 span:nth-child(1){
+    animation: bounce 1s ease-in-out infinite;
+}
+
+#loader-2 span:nth-child(2){
+    animation: bounce 1s ease-in-out 0.33s infinite;
+}
+
+#loader-2 span:nth-child(3){
+    animation: bounce 1s ease-in-out 0.66s infinite;
+}
+
+@keyframes bounce{
+    0%, 75%, 100%{
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    25%{
+        -webkit-transform: translateY(-20px);
+        -ms-transform: translateY(-20px);
+        -o-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+}
+
 .d1{
     width: 100vw;
     height: 100vh;
@@ -288,18 +333,22 @@ html{
     flex-wrap: wrap;
     justify-content: space-around;
 }*/
+
 /*apparition au défiilement*/
-.reveal-loaded [class*='reveal']{
+.main-loaded [class*='reveal']{
     opacity: 0;
     transform: translateY(30px);
     transition: 0s;
 }
-.reveal-loaded .reveal-visible{
+.main-loaded .reveal-visible{
     opacity: 1;
     transform: translateY(0);
     transition: 2s cubic-bezier(.54,.01,0,.99);
 }
-
+/*mise en place du loader*/
+.reveal-loaded .container{
+    display:none;
+}
 @media screen and (min-width: 800px){
     @keyframes mobileWelcome{
         0%{

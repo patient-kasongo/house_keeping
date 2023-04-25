@@ -3,8 +3,9 @@ let contenair_whrite=document.querySelector(".big_name")
 let direction=' '
 let str="";
 let i=0
-let button=document.querySelector(".navbar-button");
+let button=document.querySelector(".navbar-button")
 let body=document.querySelector("body")
+let loader=document.getElementById("loader_container")
 const name_whrite=['House Keeping']
 let mynumber=function()
 {
@@ -47,6 +48,9 @@ const handleIntersect = function (entries, observer) {
 }
 document.documentElement.classList.add('reveal-loaded')
 document.addEventListener("DOMContentLoaded", function(){
+    document.documentElement.classList.remove('reveal-loaded')
+    document.documentElement.classList.add('main-loaded')
+    body.removeChild(loader)
     const observer=new IntersectionObserver(handleIntersect,options)
     document.querySelectorAll("[class*='reveal']").forEach(function (r){
         observer.observe(r)
